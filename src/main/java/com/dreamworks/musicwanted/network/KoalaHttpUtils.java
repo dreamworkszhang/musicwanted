@@ -1,12 +1,9 @@
 package com.dreamworks.musicwanted.network;
 
-import com.dreamworks.musicwanted.Utils.MD5;
-
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;

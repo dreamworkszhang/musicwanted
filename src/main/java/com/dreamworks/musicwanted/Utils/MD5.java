@@ -1,4 +1,4 @@
-package com.dreamworks.musicwanted.Utils;
+package com.dreamworks.musicwanted.utils;
 
 /**
  * Created by zhang on 2016/4/23.
