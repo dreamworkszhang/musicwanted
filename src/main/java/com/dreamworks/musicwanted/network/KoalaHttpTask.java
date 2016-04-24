@@ -1,7 +1,5 @@
 package com.dreamworks.musicwanted.network;
 
-import android.os.Environment;
-
 import com.dreamworks.musicwanted.global.MainApplication;
 
 import java.io.File;
@@ -26,8 +24,8 @@ public class KoalaHttpTask {
 
     private KoalaHttpTask() {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
-        File cacheDir = new File(MainApplication.getApp().getCacheDir(), RESPONSE_CACHE);
-        builder.cache(new Cache(cacheDir, RESPONSE_CACHE_SIZE));
+        //File cacheDir = new File(MainApplication.getApp().getCacheDir(), RESPONSE_CACHE);
+        // builder.cache(new Cache(cacheDir, RESPONSE_CACHE_SIZE));
         builder.connectTimeout(HTTP_CONNECT_TIMEOUT, TimeUnit.MILLISECONDS);
         builder.readTimeout(HTTP_READ_TIMEOUT, TimeUnit.MILLISECONDS);
         builder.writeTimeout(HTTP_WRITE_TIMEOUT, TimeUnit.MILLISECONDS);
@@ -45,10 +43,9 @@ public class KoalaHttpTask {
         return instance;
     }
 
-    public OkHttpClient getOkHttpClient () {
+    public OkHttpClient getOkHttpClient() {
         return okHttpClient;
     }
-
 
 
 }

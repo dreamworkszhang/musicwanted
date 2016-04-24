@@ -92,6 +92,7 @@ public class KoalaHttpUtils {
             boolean isFirst = true;
             while (iterator.hasNext()) {
                 if (isFirst) {
+                    //noinspection deprecation
                     str += "?" + iterator.next().getKey() + "=" + URLEncoder.encode(iterator.next().getValue());
                     isFirst = false;
                 } else {
