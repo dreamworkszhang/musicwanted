@@ -2,52 +2,49 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" >
+        android:layout_weight="1">
 
         <com.dreamworks.musicwanted.view.HomePlayView
             android:id="@+id/activity_play_homeplayview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:id="@+id/activity_play_layout_left"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#ff0000"
-                android:orientation="vertical" >
-            </LinearLayout>
+                android:orientation="vertical"></LinearLayout>
 
             <LinearLayout
                 android:id="@+id/activity_play_layout_home"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#00ff00"
-                android:orientation="vertical" >
-            </LinearLayout>
+                android:orientation="vertical"></LinearLayout>
 
             <LinearLayout
                 android:id="@+id/activity_play_layout_right"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#0000ff"
-                android:orientation="vertical" >
-            </LinearLayout>
+                android:orientation="vertical"></LinearLayout>
         </com.dreamworks.musicwanted.view.HomePlayView>
 
         <TextView
-            android:layout_gravity="bottom|center_horizontal"
             android:id="@+id/activity_play_lrc_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:layout_gravity="bottom|center_horizontal"
             android:layout_marginBottom="30dp"
-            android:textColor="@android:color/white"
+            android:gravity="center"
             android:text="@string/zanwugeci"
+            android:textColor="@android:color/white"
             android:textSize="14sp" />
 
         <LinearLayout
@@ -55,7 +52,7 @@
             android:layout_height="10dp"
             android:layout_gravity="bottom|center_horizontal"
             android:layout_marginBottom="15dp"
-            android:background="@android:color/transparent" >
+            android:background="@android:color/transparent">
 
             <ImageView
                 android:id="@+id/activity_play_leftlayout_image"
@@ -84,7 +81,7 @@
         android:layout_height="wrap_content"
         android:background="@android:color/black"
         android:gravity="center_vertical"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/activity_play_current_time"
@@ -106,7 +103,8 @@
             android:paddingRight="10dp"
             android:progress="50"
             android:thumb="@drawable/shape_oval_ffffff_15"
-            android:thumbOffset="10dp" />
+            android:thumbOffset="10dp"
+            android:indeterminate="false" />
 
         <TextView
             android:id="@+id/activity_play_total_time"
@@ -119,12 +117,43 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@android:color/black"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/activity_play_presong_imageview"
+            android:background="@drawable/selector_button_pre"
+            android:layout_marginRight="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/activity_play_play_imageview"
+            android:layout_width="wrap_content"
+            android:background="@drawable/selector_button_play"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/activity_play_pause_imageview"
+            android:layout_width="wrap_content"
+            android:background="@drawable/selector_button_pause"
+            android:visibility="gone"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/activity_play_nextsong_imageview"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:background="@drawable/selector_button_next"
+            android:layout_height="wrap_content" />
+
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </LinearLayout>
+        android:layout_height="wrap_content"></LinearLayout>
 
 </LinearLayout>
