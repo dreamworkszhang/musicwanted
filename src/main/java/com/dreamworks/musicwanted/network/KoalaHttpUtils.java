@@ -105,6 +105,11 @@ public class KoalaHttpUtils {
 
     public void cancelRequest(String tag) {
         ArrayList<String> reqUrls = activityRequests.get(tag);
+
+        if (reqUrls == null) {
+            return;
+        }
+
         for (String reqUrl : reqUrls) {
             if (urlMap.containsKey(reqUrl)) {
                 Call call = urlMap.get(reqUrl);

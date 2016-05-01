@@ -9,5 +9,6 @@
     <string name="json_parse_error">JSON解析异常</string>
     <string name="net_error">网络错误</string>
 
+    <string name="zanwugeci">暂无歌词</string>
 
 </resources>
